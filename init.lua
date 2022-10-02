@@ -1,3 +1,7 @@
+local S = minetest.get_translator("picture_of_the_day")
+local MP = minetest.get_modpath("picture_of_the_day")
+local infotext = dofile(MP .. "/infotext.lua")
+
 minetest.register_node("picture_of_the_day:picture1", {
 	description = S("Picture of the day"),
 	tiles = {"picture_of_the_day_texture.png^picture_of_the_day_frame.png"},
@@ -9,9 +13,33 @@ minetest.register_node("picture_of_the_day:picture1", {
 		},
 	},
 	
+	after_place_node = function(pos, placer)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", infotext)
+	end,
+	
 	paramtype = 'light',
 	paramtype2 = "facedir",
 	groups = {cracky=2, crumbly=2, choppy=2},
 	is_ground_content = false,
 })
 
+minetest.register_craft({
+	output = "picture_of_the_day:picture1",
+	recipe = {
+		{"default:stick", "default:paper", "default:paper"},
+		{"default:stick", "default:paper", "default:paper"},
+		{"default:stick", "default:paper", "default:paper"},
+	},
+})
+
+minetest.register_lbm({
+	label = "Update Infotext",
+	name = "picture_of_the_day:picture",
+	nodenames = {"picture_of_the_day:picture1"},
+	run_at_every_load = true,
+	action = function(pos, node)
+		local meta = minetest.get_meta(pos)
+		meta:set_string("infotext", infotext)
+	end,
+})

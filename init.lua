@@ -20,6 +20,8 @@ minetest.register_node("picture_of_the_day:picture1", {
 	
 	paramtype = 'light',
 	paramtype2 = "facedir",
+	light_source = 4,
+	use_texture_alpha = "clip",
 	groups = {cracky=2, crumbly=2, choppy=2},
 	is_ground_content = false,
 })

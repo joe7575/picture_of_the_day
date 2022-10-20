@@ -26,6 +26,11 @@ os.system("pngquant --skip-if-larger --quality=80 --strip %s --ext .png --force"
 
 data = json.load(open("./store/pictures.json"))
 name = os.path.splitext(os.path.basename(src))[0]
-attr = data[name]
+
+if name in data:
+    attr = data[name]
+else:
+    attr = {"title":"unknown", "owner":"unknown", "pos":"unknown"}
+
 text = "'%s' by %s at %s" % (attr["title"], attr["owner"], attr["pos"])
 open("./infotext.lua", "wt").write("return [[%s]]" % text)

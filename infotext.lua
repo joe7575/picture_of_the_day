@@ -1,1 +1,1 @@
-return [['kleine Kapelle' by Michael-S at x,y,z]]
+return [['unknown' by unknown at unknown]]

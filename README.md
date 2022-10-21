@@ -9,22 +9,17 @@ picture title, picture owner, and position of the object to the JSON file `pictu
 The format of the PNG file images should be square. For the "picture of the day" it will
 be converted to a texture with 256x256 pixels.
 
+<details>
+<summary>
+Dependancies
+</summary>
+* There are no dependancies listed.
+</details>
 
-### License
+<details>
+<summary>
+History
+</summary>
 
-Copyright (C)2022 Joachim Stolberg
-
-Code: Licensed under the GNU GPL version 3 or later. See LICENSE.txt
-
-Textures: CC BY-SA 3.0
-
-
-### Dependencies
-
-Required: default
-
-
-### History
-
-- 2022-20-02  v1.00 * First version
-
+* <details><summary>February 20, 2022</summary>Initial version.</details>
+</details>

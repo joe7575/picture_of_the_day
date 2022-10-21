@@ -1,0 +1,13 @@
+# Maintaining a code style with an editor configuration.
+# If your IDE does not support it, please look for extensions or plugins that allow it.
+# If you cannot format as such, please note it in your code or in the comments of your document.
+
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+
+[*.{lua,py}]
+indent_size = 4
+indent_style = tab

@@ -1,13 +1,36 @@
-# Picture of the day [picture_of_the_day]
+# Picture Of The Day
 
-To change the picture on a daily basis, the script `dice_picture.py` has to be called once a day.
-This also requires a server restart.
+## Usage
 
-To add new pictures, copy the PNG file into the filter `store` and add PNG file name,
-picture title, picture owner, and position of the object to the JSON file `pictures.json`.
+This section goes over using the scripts & adding new images.
 
-The format of the PNG file images should be square. For the "picture of the day" it will
-be converted to a texture with 256x256 pixels.
+### Changing the picture
+
+`dice_picture.py` has to be called once a day and will require a server restart.
+
+### Adding pictures
+
+To include new images, they must be in **png** format, be at least 256 pixels in width and height & be placed into the store folder.
+
+In order for the images to display, a new array must be created in [pictures.json]() including the file's name, title, author & position. Below is an example of an image in the array:
+
+```json
+{
+    // below adds an image from the store folder called image-file-name.png
+    "image-file-name": {
+        // title
+        "title": "Image",
+        
+        // author
+        "owner": "",
+        
+        // position
+        "pos": "x,y,z",
+    }
+}
+```
+
+## Miscellaneous
 
 <details>
 <summary>
@@ -23,5 +46,8 @@ Dependancies
 History
 </summary>
 
-* <details><summary>February 20, 2022</summary>Initial version.</details>
+* <details><summary>October 20, 2022</summary>Move source to `src` & update project information.</details>
+
+* <details><summary>October 1, 2022</summary>Initial version.</details>
+
 </details>

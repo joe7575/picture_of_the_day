@@ -13,7 +13,9 @@ be converted to a texture with 256x256 pixels.
 <summary>
 Dependancies
 </summary>
+
 * There are no dependancies listed.
+
 </details>
 
 <details>
